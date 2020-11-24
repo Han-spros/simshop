@@ -1,0 +1,16 @@
+{% extends 'base_main.html' %}
+
+
+{% load static %}
+
+{% block extcss %}
+    {{ block.super  }}
+    <link rel="stylesheet" href="{% static 'app/mine/mine.css' %}">
+{% endblock %}
+
+
+{% block header %}
+    <header>
+    <div>我的</div>
+    </header>
+{% endblock %}

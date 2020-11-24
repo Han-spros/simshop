@@ -1,0 +1,37 @@
+{% extends 'base_main.html' %}
+
+
+{% load static %}
+
+{% block extcss %}
+    {{ block.super  }}
+    <link rel="stylesheet" href="{% static 'app/home/home.css' %}">
+{% endblock %}
+
+{#加载js文件#}
+{% block extjs %}
+    <script src="{% static 'app/home/home.js' %}"></script>
+{% endblock %}
+
+{% block header %}
+    <header>
+        <div>首页</div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <div id="home">
+        <div class="swiper-container" id="topSwiper">
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: red">Slide1</div>
+                <div class="swiper-slide" style="background: blue">Slide2</div>
+                <div class="swiper-slide" style="background: green">Slide3</div>
+            </div>
+
+            {#如果需要分页器#}
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+{% endblock %}
